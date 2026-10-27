@@ -1,0 +1,30 @@
+# Veckans luncher. Rader som börjar med # syns inte på sidan.
+# Överst: veckans nummer och priserna. Sedan en tom rad, dagen och dagens två rätter.
+# Sist Veckans wok. Spara filen och ladda upp den, så uppdateras sidan.
+
+V44
+Dagens inkl. bröd, salladsbuffé, dryck, kaffe & 110:-
+Avhämtning inkl. sallad & bröd 95:- inkl.dricka 105:-
+
+Måndag
+Falukorvsgratäng med ris
+Fiskgratäng med champinjonsås
+
+Tisdag
+Broccoligratinerad kassler med tomatsås
+Pasta med spenat & fetaost
+
+Onsdag
+Stuvade makaroner & stekt falukorv
+Panerad fisk med örtsås
+
+Torsdag
+Köttbullar med gräddsås & lingon
+Ärtsoppa & pannkakor
+
+Fredag
+Kycklingschnitzel med persiljesmör
+Oscars lasagne
+
+Veckans wok
+Wokat ris med kyckling

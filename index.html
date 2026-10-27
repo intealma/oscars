@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunchrestaurang Linköping | Startsida | Restaurang Oscar</title>
+<meta name="description" content="Lunchrestaurang och catering i Linköping - Välkommen till Restaurang Oscar - goda luncher, julbord och catering m.m. Lunch serveras vardagar 11:00-14:30.">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/michroma.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurang Oscar",
+  "url": "https://www.oscars.nu/",
+  "telephone": "+46 13 31 30 20",
+  "email": "restaurangoscars@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Roxengatan 7",
+    "postalCode": "582 73",
+    "addressLocality": "Linköping",
+    "addressCountry": "SE"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 58.42542, "longitude": 15.62154 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "11:00",
+    "closes": "14:00"
+  }],
+  "hasMenu": "https://www.oscars.nu/#veckans-luncher"
+}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" class="defs" aria-hidden="true" focusable="false">
+  <symbol id="lockup" viewBox="14 52 936 340">
+    <image href="assets/flame.svg" x="22" y="150" width="782" height="240"/>
+    <text x="75" y="113" textLength="865" lengthAdjust="spacing">RESTAURANG</text>
+    <text x="470" y="244" textLength="420" lengthAdjust="spacing">OSCAR</text>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">Till innehållet</a>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#hem">
+      <svg class="lockup" role="img" aria-label="Restaurang Oscar"><use href="#lockup"/></svg>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Meny">
+      <a href="#hem">Hem</a>
+      <a href="#veckans-luncher">Veckans luncher</a>
+      <a href="#catering" data-tab="lunch">Catering</a>
+      <a href="#catering" data-tab="jul">Julbord</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#om">Om</a>
+    </nav>
+
+    <a class="top-tel" href="tel:+4613313020">013-31 30 20</a>
+    <button class="cart-btn" type="button" data-open-order>
+      Beställ <span class="cart-count" data-cart-count hidden>0</span>
+    </button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Meny">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="hem">
+    <div class="wrap hero-in">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="hero-welcome">Välkommen till</span>
+          <svg class="lockup hero-lockup" role="img" aria-label="Restaurang Oscar"><use href="#lockup"/></svg>
+        </h1>
+        <p class="hero-links">
+          <a href="#veckans-luncher">Luncher</a><span aria-hidden="true">|</span><a href="#catering" data-tab="lunch">Catering</a><span aria-hidden="true">|</span><a href="#catering" data-tab="jul">Julbord</a>
+        </p>
+        <p class="hero-hours">Luncher m&aring;ndag-fredag 11.00-14.00</p>
+        <div class="hero-cta">
+          <a class="btn btn-flame" href="#catering" data-tab="lunch">Beställ catering</a>
+          <a class="btn btn-line" href="#veckans-luncher">Veckans luncher</a>
+        </div>
+      </div>
+
+      <aside class="today" data-today hidden>
+        <div class="today-top">
+          <p class="today-day" data-today-day></p>
+          <p class="today-week" data-week></p>
+        </div>
+        <ul class="today-dishes" data-today-dishes></ul>
+        <p class="today-wok" data-today-wok></p>
+        <p class="today-price" data-price="0"></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="lunch" id="veckans-luncher">
+    <div class="wrap lunch-in">
+      <div class="lunch-head">
+        <h2 class="h2">Veckans luncher</h2>
+        <p class="lunch-week" data-week></p>
+        <p class="lunch-price" data-price="0"></p>
+        <p class="lunch-price" data-price="1"></p>
+        <p class="lunch-hours">Luncher m&aring;ndag-fredag 11.00-14.00</p>
+        <a class="link-pdf" href="matsedel.pdf">Veckans luncher (pdf)</a>
+      </div>
+      <div class="lunch-body">
+        <ol class="days" data-days></ol>
+        <div class="wok" data-wok hidden>
+          <p class="wok-label">Veckans wok</p>
+          <p class="wok-dish" data-wok-dish></p>
+        </div>
+        <noscript><p><a class="link-pdf" href="matsedel.pdf">Veckans luncher (pdf)</a></p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="catering" id="catering">
+    <div class="wrap">
+      <h2 class="h2">Catering</h2>
+
+      <div class="tabs" role="tablist" aria-label="Catering">
+        <button class="tab" role="tab" id="tab-lunch" aria-controls="p-lunch" aria-selected="true" data-tab-btn="lunch">Catering lunch</button>
+        <button class="tab" role="tab" id="tab-ovrig" aria-controls="p-ovrig" aria-selected="false" tabindex="-1" data-tab-btn="ovrig">Catering &ouml;vrig tid</button>
+        <button class="tab" role="tab" id="tab-baguetter" aria-controls="p-baguetter" aria-selected="false" tabindex="-1" data-tab-btn="baguetter">Baguetter</button>
+        <button class="tab" role="tab" id="tab-pajer" aria-controls="p-pajer" aria-selected="false" tabindex="-1" data-tab-btn="pajer">Pajer</button>
+        <button class="tab" role="tab" id="tab-jul" aria-controls="p-jul" aria-selected="false" tabindex="-1" data-tab-btn="jul">Julbord</button>
+      </div>
+
+      <div class="panel" id="p-lunch" role="tabpanel" aria-labelledby="tab-lunch" data-panel="lunch">
+        <div class="panel-head">
+          <div class="panel-intro">
+            <h3 class="h3">Catering luncher</h3>
+            <p>Vi levererar luncher varje vardag till ditt företag ca kl 10:30-11:30</p>
+            <p>Maila eller ring in din beställning senast kl 09:00 (minimum 5 personer)</p>
+            <p>I priset ingår grönsallad, knäckebröd &amp; smör samt utkörning</p>
+          </div>
+          <div class="daypick">
+            <p class="label" id="daypick-label">Leveransdag</p>
+            <div class="chips" role="radiogroup" aria-labelledby="daypick-label" data-daypick></div>
+          </div>
+        </div>
+        <div class="grid" data-grid="lunch"></div>
+      </div>
+
+      <div class="panel" id="p-ovrig" role="tabpanel" aria-labelledby="tab-ovrig" data-panel="ovrig" hidden>
+        <div class="panel-head">
+          <div class="panel-intro panel-intro-wide">
+            <h3 class="h3">Catering &ouml;vrig tid</h3>
+            <p>Här har vi ett stort utbud av olika menyförslag som passar till många tillfällen, årstider och för olika smaker. Dessa menyer är bara förslag så om du vill lägga till eller ändra på något kan vi skräddarsy en meny som passar dina behov.</p>
+            <p>Bokningar för catering, övrig tid, tas endast emot via telefon (<a href="tel:+4613313020">013-31 30 20</a>). Har du frågor angående catering, företagsevenemang eller privata fester är du välkommen att höra av dig via telefon eller mail, så kan vi diskutera dina önskemål.</p>
+            <p><a href="mailto:restaurangoscars@gmail.com">restaurangoscars@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="grid grid-menus" data-grid="ovrig"></div>
+      </div>
+
+      <div class="panel" id="p-baguetter" role="tabpanel" aria-labelledby="tab-baguetter" data-panel="baguetter" hidden>
+        <div class="panel-head">
+          <div class="panel-intro">
+            <h3 class="h3">Baguetter</h3>
+            <p>Välj bland våra baguetter. Här finns något för alla smaker!</p>
+          </div>
+        </div>
+        <div class="grid" data-grid="baguetter"></div>
+      </div>
+
+      <div class="panel" id="p-pajer" role="tabpanel" aria-labelledby="tab-pajer" data-panel="pajer" hidden>
+        <div class="panel-head">
+          <div class="panel-intro">
+            <h3 class="h3">Pajer</h3>
+            <p>Välj bland våra pajer. Här finns något för alla smaker!</p>
+            <p>Pajerna är för fem personer.</p>
+          </div>
+        </div>
+        <div class="grid" data-grid="pajer"></div>
+      </div>
+
+      <div class="panel" id="p-jul" role="tabpanel" aria-labelledby="tab-jul" data-panel="jul" hidden>
+        <div class="panel-head jul-head">
+          <img class="jul-img" src="assets/img/julbord.jpg" width="273" height="150" alt="Julbord">
+          <div class="panel-intro">
+            <h3 class="h3">Julbord Info 2026</h3>
+            <p>Förslag på catering av julmat.</p>
+            <ul class="jul-list">
+              <li>Julbord</li>
+              <li>Jultallrik med småvarmt</li>
+              <li>Kall Jultallrik</li>
+              <li>Skinkmackor</li>
+              <li>Julgröt</li>
+              <li>Med mera</li>
+            </ul>
+            <p>Ring eller maila om du har frågor om pris eller vad som<br>Så ska vi göra allt för era önskemål</p>
+            <p class="jul-contact"><a href="tel:+4613313020">013-313020</a> <a href="mailto:restaurangoscars@gmail.com">restaurangoscars@gmail.com</a></p>
+          </div>
+        </div>
+        <p class="jul-title">Julmat från Restaurang Oscar 2026</p>
+        <div class="grid grid-menus grid-jul" data-grid="jul"></div>
+        <p class="jul-pdf"><a class="link-pdf" href="Jul2026info.pdf">Julbord Info 2026 (pdf)</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="om" id="om">
+    <div class="wrap om-in">
+      <div class="om-text">
+        <h2 class="h2">Om oss</h2>
+        <p>Lunchrestaurangen Restaurang Oscar drivs sedan våren 2015 av Kajsa Hagberg tillsammans med erfaren personal. Kajsa som har varit anställd på Oscars under 15 år, tar nu över rodret efter sin bror Nicke "kocken" Kaller.På Oscars serverar vi luncher och då främst husmanskost alternativt diverse smårätter.</p>
+        <p>Utöver lunchverksamheten bedriver vi även cateringverksamhet för både luncher, privata fester och företagsevenemang.</p>
+        <p class="om-welcome">Välkomna till oss på Restaurang Oscar!</p>
+      </div>
+      <figure class="om-fig">
+        <img src="assets/img/om.jpg" width="480" height="257" alt="Catering" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="kontakt" id="kontakt">
+    <div class="wrap kontakt-in">
+      <div class="kontakt-text">
+        <h2 class="h2">Kontaktuppgifter</h2>
+        <ul class="kontakt-list">
+          <li><a href="mailto:restaurangoscars@gmail.com">restaurangoscars@gmail.com</a></li>
+          <li><a href="tel:+4613313020">Telefon: 013- 31 30 20</a></li>
+          <li>Roxengatan 7 &nbsp;582 73 Linköping</li>
+        </ul>
+        <p class="kontakt-hours">Luncher m&aring;ndag-fredag 11.00-14.00</p>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Roxengatan+7,+582+73+Link%C3%B6ping" target="_blank" rel="noopener">Hitta hit</a>
+      </div>
+      <div class="map">
+        <iframe title="Karta Restaurang Oscar" loading="lazy" referrerpolicy="no-referrer"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=15.6125%2C58.4215%2C15.6305%2C58.4290&amp;layer=mapnik&amp;marker=58.42542%2C15.62154"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <svg class="lockup foot-lockup" role="img" aria-label="Restaurang Oscar"><use href="#lockup"/></svg>
+    <p>Copyright &copy; 2025 Restaurang Oscar <span>|</span> <a href="#kontakt">Kontakt</a> <span>|</span> <a href="mailto:restaurangoscars@gmail.com">restaurangoscars@gmail.com</a> <span>|</span> <a href="tel:+4613313020">Tel: 013-31 30 20</a></p>
+  </div>
+</footer>
+
+<div class="orderbar" data-orderbar hidden>
+  <button class="orderbar-btn" type="button" data-open-order>
+    <span class="orderbar-sum"><span data-bar-count></span><span data-bar-total></span></span>
+    <span class="orderbar-go">Gå vidare</span>
+  </button>
+</div>
+
+<div class="drawer" data-drawer hidden>
+  <div class="drawer-bg" data-close-order></div>
+  <div class="drawer-box" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <div class="drawer-top">
+      <h2 class="drawer-title" id="drawer-title">Din beställning</h2>
+      <button class="drawer-x" type="button" data-close-order aria-label="Stäng">&times;</button>
+    </div>
+    <ol class="steps" data-steps>
+      <li data-step-label="1" aria-current="step">Beställning</li>
+      <li data-step-label="2">Uppgifter</li>
+    </ol>
+
+    <form class="drawer-form" data-order-form novalidate>
+      <div class="step" data-step="1">
+        <div class="empty" data-empty hidden>
+          <p class="empty-title">Varukorgen är tom</p>
+          <ul class="empty-links">
+            <li><a href="#catering" data-tab="lunch" data-close-order>Catering lunch</a></li>
+            <li><a href="#catering" data-tab="ovrig" data-close-order>Catering &ouml;vrig tid</a></li>
+            <li><a href="#catering" data-tab="baguetter" data-close-order>Baguetter</a></li>
+            <li><a href="#catering" data-tab="pajer" data-close-order>Pajer</a></li>
+            <li><a href="#catering" data-tab="jul" data-close-order>Julbord</a></li>
+          </ul>
+        </div>
+        <div data-filled>
+          <div class="lines" data-lines></div>
+          <p class="total"><span>Totalt</span><span data-total></span></p>
+
+          <div class="field">
+            <label for="f-datum">Leveransdag</label>
+            <input type="date" id="f-datum" name="datum" required data-date-input>
+          </div>
+          <p class="hint" data-vardag-hint hidden>Vi levererar luncher varje vardag till ditt företag ca kl 10:30-11:30</p>
+          <div class="field" data-tid-field hidden>
+            <label for="f-tid">Tid</label>
+            <input type="time" id="f-tid" name="tid" step="900">
+          </div>
+          <p class="warn" data-warn role="alert" hidden></p>
+
+          <button class="btn btn-flame btn-wide" type="button" data-next>Gå vidare</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="2" hidden>
+        <div class="field">
+          <label for="f-namn">Namn</label>
+          <input id="f-namn" name="namn" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="f-foretag">Företag</label>
+          <input id="f-foretag" name="foretag" autocomplete="organization" maxlength="120">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-telefon">Telefon</label>
+            <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" required maxlength="40">
+          </div>
+          <div class="field">
+            <label for="f-epost">E-post</label>
+            <input id="f-epost" name="epost" type="email" autocomplete="email" required maxlength="160">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-adress">Leveransadress</label>
+          <input id="f-adress" name="adress" autocomplete="street-address" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="f-meddelande">Meddelande</label>
+          <textarea id="f-meddelande" name="meddelande" rows="3" maxlength="2000"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="f-webbplats">Webbplats</label>
+          <input id="f-webbplats" name="webbplats" tabindex="-1" autocomplete="off">
+        </div>
+        <label class="check">
+          <input type="checkbox" name="samtycke" value="ja" required>
+          <span>Restaurang Oscar får spara mina uppgifter för att hantera beställningen.</span>
+        </label>
+        <p class="summary" data-summary></p>
+        <p class="warn" data-warn2 role="alert" hidden></p>
+        <p class="f-demo">Demo: beställningen skickas inte.</p>
+        <button class="btn btn-flame btn-wide" type="submit" data-submit>Skicka beställning</button>
+        <button class="btn-back" type="button" data-back>Tillbaka</button>
+      </div>
+
+      <div class="step step-done" data-step="3" hidden>
+        <p class="done-title" data-done-title>Beställningen är skickad</p>
+        <p class="done-ref" data-done-ref></p>
+        <div class="lines lines-done" data-done-lines></div>
+        <p class="done-contact"><a href="mailto:restaurangoscars@gmail.com">restaurangoscars@gmail.com</a> <span>|</span> <a href="tel:+4613313020">Tel: 013-31 30 20</a></p>
+        <button class="btn btn-line btn-wide" type="button" data-close-order>Stäng</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="demo-badge" aria-hidden="true">Demo</div>
+</body>
+</html>

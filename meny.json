@@ -1,0 +1,61 @@
+{
+  "grupper": {
+    "lunch": { "namn": "Catering lunch", "typ": "vardag" },
+    "baguetter": { "namn": "Baguetter", "typ": "vardag" },
+    "pajer": { "namn": "Pajer", "typ": "vardag", "personer": 5 },
+    "ovrig": { "namn": "Catering övrig tid", "typ": "forfragan" },
+    "jul": { "namn": "Julbord", "typ": "forfragan" }
+  },
+  "dagens": {
+    "alt": "Alternativ 1-3",
+    "namn": "Dagens (se matsedel)",
+    "pris": 90,
+    "prisText": "90 kr",
+    "bild": "assets/img/dagens.jpg"
+  },
+  "rader": [
+    { "id": "dagens1", "grupp": "lunch", "alt": "Alternativ 1", "namn": "Dagens (se matsedel)", "pris": 90, "prisText": "90 kr" },
+    { "id": "dagens2", "grupp": "lunch", "alt": "Alternativ 2", "namn": "Dagens (se matsedel)", "pris": 90, "prisText": "90 kr" },
+    { "id": "dagens3", "grupp": "lunch", "alt": "Alternativ 3", "namn": "Dagens (se matsedel)", "pris": 90, "prisText": "90 kr" },
+    { "id": "alt4", "grupp": "lunch", "alt": "Alternativ 4", "namn": "Kycklingsallad", "pris": 90, "prisText": "90 kr", "bild": "assets/img/kycklingsallad.jpg" },
+    { "id": "alt5", "grupp": "lunch", "alt": "Alternativ 5", "namn": "Räksallad", "pris": 90, "prisText": "90 kr", "bild": "assets/img/raksallad.jpg" },
+    { "id": "alt6", "grupp": "lunch", "alt": "Alternativ 6", "namn": "Grekisk sallad", "pris": 90, "prisText": "90 kr", "bild": "assets/img/grekisk-sallad.jpg" },
+    { "id": "alt7", "grupp": "lunch", "alt": "Alternativ 7", "namn": "Mixsallad(räkor, kyckling, skagen)", "pris": 90, "prisText": "90 kr", "bild": "assets/img/mixsallad.jpg" },
+    { "id": "alt8", "grupp": "lunch", "alt": "Alternativ 8", "namn": "Ceasarsallad", "pris": 90, "prisText": "90 kr", "bild": "assets/img/ceasarsallad.jpg" },
+    { "id": "alt9", "grupp": "lunch", "alt": "Alternativ 9", "namn": "Pytt i panna, ägg & rödbetor", "pris": 95, "prisText": "95 kr", "bild": "assets/img/pytt-i-panna.jpg" },
+    { "id": "alt10", "grupp": "lunch", "alt": "Alternativ 10", "namn": "Spättafilé, kall dill-& gräslöksås", "pris": 95, "prisText": "95 kr", "bild": "assets/img/spattafile.jpg" },
+    { "id": "alt11", "grupp": "lunch", "alt": "Alternativ 11", "namn": "Köttbullar, gräddsås & lingon", "pris": 95, "prisText": "95 kr", "bild": "assets/img/kottbullar.jpg" },
+    { "id": "alt12", "grupp": "lunch", "alt": "Alternativ 12", "namn": "Schnitzel med bearnaisesås", "pris": 100, "prisText": "100 kr", "bild": "assets/img/schnitzel.jpg" },
+
+    { "id": "bag1", "grupp": "baguetter", "alt": "Alternativ 1", "namn": "Skagen", "pris": 80, "prisText": "80 kr", "bild": "assets/img/baguette-skagen.jpg" },
+    { "id": "bag2", "grupp": "baguetter", "alt": "Alternativ 2", "namn": "Ost & skinka", "pris": 60, "prisText": "60 kr", "bild": "assets/img/baguette-ost-skinka.jpg" },
+    { "id": "bag3", "grupp": "baguetter", "alt": "Alternativ 3", "namn": "Rostbiff & potatissallad", "pris": 80, "prisText": "80 kr", "bild": "assets/img/baguette-rostbiff.jpg" },
+    { "id": "bag4", "grupp": "baguetter", "alt": "Alternativ 4", "namn": "Parmaskinka & brie", "pris": 80, "prisText": "80 kr", "bild": "assets/img/baguette-parmaskinka.jpg" },
+
+    { "id": "paj1", "grupp": "pajer", "alt": "Alternativ 1", "namn": "Västerbottenpaj", "pris": 170, "prisText": "170 kr", "bild": "assets/img/paj-vasterbotten.jpg" },
+    { "id": "paj2", "grupp": "pajer", "alt": "Alternativ 2", "namn": "Tacopaj", "pris": 150, "prisText": "150 kr", "bild": "assets/img/paj-taco.jpg" },
+    { "id": "paj3", "grupp": "pajer", "alt": "Alternativ 3", "namn": "Ost- & skinkpaj", "pris": 150, "prisText": "150 kr", "bild": "assets/img/paj-ost-skinka.jpg" },
+    { "id": "paj4", "grupp": "pajer", "alt": "Alternativ 4", "namn": "Skaldjurspaj", "pris": 170, "prisText": "170 kr", "bild": "assets/img/paj-skaldjur.jpg" },
+
+    { "id": "favoritmeny", "grupp": "ovrig", "namn": "Favoritmeny", "pris": 305, "prisText": "305:-/pers", "bild": "assets/img/favoritmeny.jpg",
+      "innehall": [["Oscars Rostbiff", "Chilimarinerade små kycklingspett", "Tunnbrödsrulle med parmaskinka & brie", "Italiensk potatissallad", "Vanlig potatissallad", "Fetaostcreme", "Tzatziki", "Ostpaj", "Spröd ruccolasallad", "Fuccatia & smör"]] },
+    { "id": "mixmeny", "grupp": "ovrig", "namn": "Mixmeny", "pris": 285, "prisText": "285:-/pers", "bild": "assets/img/mixmeny.jpg",
+      "innehall": [["Rostbiff", "Mangomarinerad kyckling", "Potatissallad", "Vitlöksmarinerade champinjoner", "Olivpaj med örtsås", "Chilimarinerade oliver", "Ädelost, kex & vindruvor", "Tomatfoccacia"]] },
+    { "id": "grillmeny", "grupp": "ovrig", "namn": "Grillmeny", "pris": 365, "prisText": "365:-/pers", "bild": "assets/img/grillmeny.jpg",
+      "innehall": [["Fläskfiléspett", "Kycklingspett", "Tzatsiki", "Coleslaw", "Bearnaise", "Vanlig potatissallad", "Ruccolasallad med fetaost & rödlök", "Smör & baguetter"]] },
+
+    { "id": "julbord", "grupp": "jul", "namn": "Catering Julbord", "pris": 430, "prisText": "430:-/pers inkl moms", "pdf": "Julbord-2026.pdf",
+      "innehall": [
+        ["Löksill", "senapssill", "gravlax med hovmästarsås", "inkokt lax", "räkägg", "Tunnbrödssnittar med rostbiff", "Griljerad julskinka", "sötstark senap", "rökt korv", "leverpastej", "rödbetssallad", "julost", "vörtbröd", "smör", "skumtomtar"],
+        ["Köttbullar", "prinskorv", "jansons frestelse", "revbensspjäll", "bruna bönor", "sillpotatis"],
+        ["Morotskaka"]
+      ] },
+    { "id": "jultallrik", "grupp": "jul", "namn": "Catering Jultallrik med småvarmt", "pris": 350, "prisText": "350:-/pers inkl moms", "pdf": "Jultallrik-2026.pdf",
+      "innehall": [
+        ["Löksill", "senapssill", "gravlax med hovmästarsås", "räkägg", "Tunnbrödssnittar med rostbiff", "Griljerad julskinka", "senap", "rökt korv", "leverpastej", "rödbetssallad", "ost", "vörtbröd", "smör"],
+        ["Köttbullar", "prinskorv", "jansons frestelse", "revbensspjäll", "sillpotatis"],
+        ["Skumtomtar"]
+      ],
+      "not": "Vill man ha dessert fråga gärna" }
+  ]
+}

@@ -2,7 +2,7 @@
 
 Designförslag för [oscars.nu](https://www.oscars.nu/). En sida med dagens lunch, veckans luncher, catering (lunch, övrig tid, baguetter, pajer, julbord), om oss och kontakt, plus en beställningskorg som skickar beställningen direkt till restaurangoscars@gmail.com. All text kommer ordagrant från nuvarande oscars.nu och dess PDF:er.
 
-Det här är en demo, inte Restaurang Oscars officiella webbplats. På GitHub Pages märks sidan Demo, visas inte i sökmotorer och beställningen skickas inte. Demoläget slås bara på för github.io, så samma filer fungerar på oscars.nu.
+Det här är en demo, inte Restaurang Oscars officiella webbplats. På GitHub Pages (https://intealma.github.io/oscars/) märks sidan Demo, visas inte i sökmotorer och beställningen skickas inte. Demoläget slås bara på för github.io, så samma filer fungerar på oscars.nu.
 
 ## Visa demon lokalt
 
